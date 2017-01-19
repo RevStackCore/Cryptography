@@ -4,7 +4,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.5</TargetFramework>
 	<PackageId>RevStackCore.Cryptography</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>S. Francis</Authors>
     <Description>Symmetric, hashed and base64 utility methods and extensions</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -41,7 +41,7 @@
     <Compile Include="Cryptography\Hash.cs" />
     <Compile Include="Cryptography\Base64.cs" />
     <Compile Include="Cryptography\Extensions.cs" />
-    <Compile Include="Cryptography\Base64Credentials.cs" />
+    <Compile Include="Cryptography\Base64Credential.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

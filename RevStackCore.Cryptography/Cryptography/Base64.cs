@@ -19,7 +19,7 @@ namespace RevStackCore.Cryptography
 			return Encrypt(text);
 		}
 
-		public static string EncryptCredentials(Base64Credentials credentials)
+		public static string EncryptCredentials(Base64Credential credentials)
 		{
 			string username = credentials.Username;
 			string password = credentials.Password;
@@ -32,13 +32,13 @@ namespace RevStackCore.Cryptography
 			return encoding.GetString(Convert.FromBase64String(base64Value));
 		}
 
-		public static Base64Credentials DecryptCredentials(string base64Value)
+		public static Base64Credential DecryptCredentials(string base64Value)
 		{
 			var credentials = Decrypt(base64Value);
 			var split = credentials.Split(':');
 			string username = split[0];
 			string password = split[1];
-			var result = new Base64Credentials
+			var result = new Base64Credential
 			{
 				Username = username,
 				Password = password
@@ -47,7 +47,7 @@ namespace RevStackCore.Cryptography
 			return result;
 		}
 
-		public static Base64Credentials DecryptCredentials(AuthenticationHeaderValue header)
+		public static Base64Credential DecryptCredentials(AuthenticationHeaderValue header)
 		{
 			var rawCredentials = header.Parameter;
 			return DecryptCredentials(rawCredentials);

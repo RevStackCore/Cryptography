@@ -29,17 +29,17 @@ namespace RevStackCore.Cryptography
 			return Base64.Encrypt(source);
 		}
 
-		public static string ToEncryptedBase64String(this Base64Credentials source)
+		public static string ToEncryptedBase64String(this Base64Credential source)
 		{
 			return Base64.EncryptCredentials(source);
 		}
 
-		public static Base64Credentials ToBase64Credentials(this string source)
+		public static Base64Credential ToBase64Credentials(this string source)
 		{
 			return Base64.DecryptCredentials(source);
 		}
 
-		public static Base64Credentials ToBase64Credentials(this AuthenticationHeaderValue source)
+		public static Base64Credential ToBase64Credentials(this AuthenticationHeaderValue source)
 		{
 			return Base64.DecryptCredentials(source);
 		}
