@@ -1,13 +1,5 @@
 ﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench ActiveDocument="package.json">
-    <Files>
-      <File FileName="RevStackCore.Cryptography/Cryptography/Base64Credential.cs" Line="4" Column="31" />
-      <File FileName="RevStackCore.Cryptography/Cryptography/Extensions.cs" Line="40" Column="4" />
-      <File FileName="RevStackCore.Cryptography/Cryptography/Base64.cs" Line="45" Column="6" />
-      <File FileName="RevStackCore.Cryptography/RevStackCore.Cryptography.csproj" Line="39" Column="14" />
-      <File FileName="package.json" Line="11" Column="60" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
