@@ -1,6 +1,6 @@
 {
   "name": "RevStackCore.Cryptography",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Symmetric, hashed and base64 utility methods and extensions",
   "main": "RevStackCore.Cryptography.sln",
   "scripts": {
