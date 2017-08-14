@@ -1,5 +1,12 @@
 ﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../../Library/Frameworks/Mono.framework/Versions/5.0.1/lib/mono/msbuild/15.0/bin/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.targets">
+    <Files>
+      <File FileName="RevStackCore.Cryptography/Cryptography/ECKeyHelper.cs" Line="5" Column="32" />
+      <File FileName="RevStackCore.Cryptography/Cryptography/JWSSigner.cs" Line="54" Column="62" />
+      <File FileName="RevStackCore.Cryptography/Cryptography/UrlBase64.cs" Line="24" Column="49" />
+      <File FileName="../../../../../../../Library/Frameworks/Mono.framework/Versions/5.0.1/lib/mono/msbuild/15.0/bin/Sdks/Microsoft.NET.Sdk/build/Microsoft.NET.Sdk.targets" Line="92" Column="62" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

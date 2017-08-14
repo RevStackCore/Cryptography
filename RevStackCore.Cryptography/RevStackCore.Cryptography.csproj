@@ -1,47 +1,29 @@
-﻿<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.5</TargetFramework>
-	<PackageId>RevStackCore.Cryptography</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <TargetFramework>netstandard1.6</TargetFramework>
+	 <PackageId>RevStackCore.Cryptography</PackageId>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>S. Francis</Authors>
     <Description>Symmetric, hashed and base64 utility methods and extensions</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Net Standard 1.5 release</PackageReleaseNotes>
+    <PackageReleaseNotes>Net Standard 1.6 release</PackageReleaseNotes>
     <Copyright>Copyright 2017</Copyright>
     <PackageTags>RevStackCore Cryptography</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="NETStandard.Library">
-      <Version>1.6</Version>
+    <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.0">
     </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
+    <PackageReference Include="BCrypt.Net-Core" Version="1.1.0">
     </PackageReference>
-    <PackageReference Include="System.Security.Cryptography.Algorithms">
-      <Version>4.3.0</Version>
+    <PackageReference Include="Portable.BouncyCastle" Version="1.8.1.2">
     </PackageReference>
-    <PackageReference Include="BCrypt.Net-Core">
-      <Version>1.1.0</Version>
-    </PackageReference>
+    <PackageReference Include="RevStackCore.Serialization" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Cryptography\" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Cryptography\Symmetric.cs" />
-    <Compile Include="Cryptography\Hash.cs" />
-    <Compile Include="Cryptography\Base64.cs" />
-    <Compile Include="Cryptography\Extensions.cs" />
-    <Compile Include="Cryptography\Base64Credential.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>
