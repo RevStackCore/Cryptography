@@ -1,4 +1,7 @@
-﻿using System.Net.Http.Headers;
+﻿using System;
+using System.Net.Http.Headers;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace RevStackCore.Cryptography
 {
@@ -48,5 +51,62 @@ namespace RevStackCore.Cryptography
 		{
 			return Base64.Decrypt(source);
 		}
+
+        public static byte[] GenerateByteKey()
+        {
+            var generator = RandomNumberGenerator.Create();
+            var salt = new byte[256 / 8];
+            generator.GetBytes(salt);
+            return salt;
+        }
+
+        public static string GenerateByteKeyString()
+        {
+            var salt = GenerateByteKey();
+            return Encoding.UTF8.GetString(salt);
+        }
+
+        public static string GenerateKey()
+        {
+            return GenerateKey(24);
+        }
+
+        public static string GenerateKey(int length)
+        {
+            const string pool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&*()+=abcdefghijklmnopqrstuvwxyz0123456789";
+            var builder = new StringBuilder();
+            var rand = new Random();
+            for (var i = 0; i < length; i++)
+            {
+                var c = pool[rand.Next(0, pool.Length)];
+                builder.Append(c);
+            }
+            return builder.ToString();
+        }
+
+        public static string RandomString(int length)
+        {
+            const string pool = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var builder = new StringBuilder();
+            var rand = new Random();
+            for (var i = 0; i < length; i++)
+            {
+                var c = pool[rand.Next(0, pool.Length)];
+                builder.Append(c);
+            }
+            return builder.ToString();
+        }
+
+        public static string RandomString(int length,string pool)
+        {
+            var builder = new StringBuilder();
+            var rand = new Random();
+            for (var i = 0; i < length; i++)
+            {
+                var c = pool[rand.Next(0, pool.Length)];
+                builder.Append(c);
+            }
+            return builder.ToString();
+        }
 	}
 }
