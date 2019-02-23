@@ -3,11 +3,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.6</TargetFramework>
 	 <PackageId>RevStackCore.Cryptography</PackageId>
-    <PackageVersion>1.0.3</PackageVersion>
+    <PackageVersion>1.0.4</PackageVersion>
     <Authors>S. Francis</Authors>
     <Description>Symmetric, hashed and base64 utility methods and extensions</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Net Standard 1.6 release</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/RevStackCore/Cryptography.git</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/RevStackCore/Cryptography/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://s3.amazonaws.com/revstack/icons/revstackcore-64x64.png</PackageIconUrl>
     <Copyright>Copyright 2017</Copyright>
     <PackageTags>RevStackCore Cryptography</PackageTags>
   </PropertyGroup>
