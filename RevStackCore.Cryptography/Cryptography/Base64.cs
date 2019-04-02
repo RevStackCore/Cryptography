@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http.Headers;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace RevStackCore.Cryptography
@@ -53,6 +54,15 @@ namespace RevStackCore.Cryptography
 			return DecryptCredentials(rawCredentials);
 		}
 
+        public static string CreateApiKey()
+        {
+            var key = new byte[32];
+            using (var generator = RandomNumberGenerator.Create())
+                generator.GetBytes(key);
+            string apiKey = Convert.ToBase64String(key);
+            return apiKey;
+        }
 
-	}
+
+    }
 }
